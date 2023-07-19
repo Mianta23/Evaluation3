@@ -66,20 +66,21 @@
                             <input type="date" name="datedepense" class="form-control" id="exampleInputEmail1"
                                 aria-describedby="emailHelp">
                         </div> --}}
-                        <div class="col-md-6">
+
+                        <div class="col-md-12">
                             <div class="form-floating">
                             <input type="number" name="jour" class="form-control" id="floatingZip" placeholder="jour"  min="1" max="31" required />
                                 <label for="floatingZip">jour</label>
                             </div>
                         </div>
 
-                        <div class="col-md-6">
+                        <div class="col-md-12">
                             <div class="form-floating">
                             <input type="number" name="annee" class="form-control" id="floatingZip" placeholder="annee"  required />
                                 <label for="floatingZip">annee</label>
                             </div>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-12">
                         <div class="form-check">
                             <input class="form-check-input" type="checkbox" name="mois[]" id="gridCheck1" value="1">Janvier
                         </div>
@@ -100,7 +101,7 @@
                         </div>
                         </div>
 
-                        <div class="col-md-6">
+                        <div class="col-md-12">
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" name="mois[]" id="gridCheck1" value="7">Juillet
                             </div>
@@ -122,9 +123,17 @@
                         </div>
 
 
-                        <button type="submit" class="btn btn-primary">Enregistrer</button>
+                        <button type="submit" class="btn btn-primary">Inserer</button>
+
                     </form>
-                </div>
+                    {{-- Error --}}
+                    {{  csrf_field() }}
+                    @if(session('erreur'))
+                    <div class="alert alert-dimissible fade show" role="alert">
+                        {{ session('erreur') }}
+                    </div>
+                    @endif
+
 
                 <script>
                     // Lorsque la date est changée, exécutez la fonction de séparation

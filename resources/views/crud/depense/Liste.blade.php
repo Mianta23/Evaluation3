@@ -24,11 +24,7 @@
                 @include('template2.Header')
                 <h2>Depense</h2>
                 <div class="container-fluid">
-                    <form action="{{ url('/recherchedepense') }}" method="post">
-                        {{ csrf_field() }}
-                        <input type="text" name="motcle">
-                        <input type="submit" value="rechercher">
-                    </form>
+
                     <br>
                     @if (session('success'))
                         <div class="alert alert-success">
@@ -124,6 +120,14 @@
                                 @endforeach
                             </tbody>
                         </table>
+                        {{-- Error
+                    {{  csrf_field() }}
+                    @if(session('erreur'))
+                    <div class="alert alert-dimissible fade show" role="alert">
+                        {{ session('erreur') }}
+                    </div>
+                    @endif --}}
+
                     </div>
 
                     <nav aria-label="Page navigation example">
