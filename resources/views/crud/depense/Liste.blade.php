@@ -93,7 +93,7 @@
                         {{ $rows->typedate }}
                         </td>
                       <td class="border-bottom-0">
-                      {{ $rows->montant }}
+                      {{ number_format($rows->montant, 2, ',',' ')}}
                       </td>
                       <td class="border-bottom-0">
                         {{ $rows->nombre }}

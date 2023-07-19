@@ -87,7 +87,7 @@
                                           </form>
 
                                                   <?php if(isset($liste)) {?>
-                                                    <h3>Tablaue recette</h3>
+                                                    <h3>Tableau recette</h3>
                                                   <table class="table">
                                                       <thead>
                                                           <tr>
@@ -115,15 +115,15 @@
                                                           ?>
                                                           <tr >
                                                               <td>{{ $liste->nom}}</td>
-                                                              <td>{{ $liste->reel}}</td>
-                                                              <td>{{ $liste->budget}}</td>
+                                                              <td>{{ number_format($liste->reel, 2, ',',' ')}}</td>
+                                                              <td>{{ number_format($liste->budget, 2, ',',' ')}}</td>
                                                               <td>{{ $liste->realisation}}</td>
                                                           </tr>
                                                           @endforeach
                                                           <tr  class="table-primary ">
                                                               <td></td>
-                                                              <td>{{ $totalrecette}}</td>
-                                                              <td>{{ $totalbudgetrecette}}</td>
+                                                              <td>{{ number_format($totalrecette, 2, ',',' ')}}</td>
+                                                              <td>{{number_format($totalbudgetrecette, 2, ',', ' ') }}</td>
                                                               <td>{{ round($totalrecette*100/$totalbudgetrecette,0)}}</td>
                                                           </tr>
                                                    </tbody>
@@ -158,15 +158,15 @@
                                                       ?>
                                                           <tr>
                                                               <td>{{ $liste->nom}}</td>
-                                                              <td>{{ $liste->reel}}</td>
-                                                              <td>{{ $liste->budget}}</td>
+                                                              <td>{{ number_format($liste->reel, 2, ',',' ')}}</td>
+                                                              <td>{{ number_format($liste->budget, 2, ',',' ')}}</td>
                                                               <td>{{ $liste->realisation}}</td>
                                                           </tr>
                                                           @endforeach
                                                           <tr  class="table-primary ">
                                                               <td></td>
-                                                              <td>{{ $totaldepense}}</td>
-                                                              <td>{{ $totalbudgetdepense}}</td>
+                                                              <td>{{ number_format($totaldepense, 2, ',',' ')}}</td>
+                                                              <td>{{ number_format($totalbudgetdepense, 2, ',',' ')}}</td>
                                                               <td>{{ round($totaldepense*100/$totalbudgetdepense,0)}}</td>
                                                           </tr>
                                                    </tbody>
@@ -189,20 +189,20 @@
 
                                                           <tr  >
                                                               <td>Recette</td>
-                                                              <td>{{ $listebenefice->recette}}</td>
-                                                              <td>{{ $listebenefice->budget_recette}}</td>
+                                                              <td>{{ number_format($listebenefice->recette, 2, ',',' ')}}</td>
+                                                              <td>{{ number_format($listebenefice->budget_recette, 2, ',',' ')}}</td>
                                                               <td>{{ $listebenefice->realisation_recette}}</td>
                                                           </tr>
                                                           <tr>
                                                               <td>Depense</td>
-                                                              <td>{{ $listebenefice->depense}}</td>
-                                                              <td>{{ $listebenefice->budget_depense}}</td>
+                                                              <td>{{ number_format($listebenefice->depense, 2, ',',' ')}}</td>
+                                                              <td>{{ number_format($listebenefice->budget_depense, 2, ',',' ')}}</td>
                                                               <td>{{ $listebenefice->realisation_depense}}</td>
                                                           </tr>
                                                           <tr  class="table-primary ">
                                                               <td></td>
-                                                              <td>{{ $listebenefice->recette - $listebenefice->depense}}</td>
-                                                              <td>{{ $listebenefice->budget_recette - $listebenefice->budget_depense}}</td>
+                                                              <td>{{ number_format($listebenefice->recette - $listebenefice->depense, 2, ',',' ')}}</td>
+                                                              <td>{{ number_format($listebenefice->budget_recette - $listebenefice->budget_depense, 2, ',',' ')}}</td>
                                                               <td>{{ round(($listebenefice->recette - $listebenefice->depense)*100/($listebenefice->budget_recette - $listebenefice->budget_depense),0)}}</td>
                                                           </tr>
                                                    </tbody>

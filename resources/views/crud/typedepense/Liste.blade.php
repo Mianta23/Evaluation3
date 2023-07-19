@@ -78,7 +78,7 @@
                       {{ $rows->typedate }}
                       </td>
                       <td class="border-bottom-0">
-                        {{ $rows->budget }}
+                        {{ number_format($rows->budget, 2, ',',' ')}}
                       </td>
                       <td class="border-bottom-0">
                       {{ $rows->code }}
