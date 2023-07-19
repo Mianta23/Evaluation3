@@ -22,6 +22,7 @@
         <div class="d-flex flex-column" id="content-wrapper">
             <div id="content">
                 @include('template2.Header')
+                <h2>Depense</h2>
                 <div class="container-fluid">
                     <form action="{{ url('/recherchedepense') }}" method="post">
                         {{ csrf_field() }}

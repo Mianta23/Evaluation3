@@ -21,6 +21,7 @@
       <div id="content">
         @include('template2.Header')
         <div class="container-fluid">
+            <h2>Facture patient</h2>
             <form action="{{ url('/recherchefacturerecette') }}" method="post">
               {{ csrf_field() }}
                 <input type="text" name="motcle">

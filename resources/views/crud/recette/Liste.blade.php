@@ -21,6 +21,7 @@
       <div id="content">
         @include('template2.Header')
         <div class="container-fluid">
+            <h2>Recette</h2>
             <form action="{{ url('/rechercherecette') }}" method="post">
               {{ csrf_field() }}
                 <input type="text" name="motcle">
@@ -95,7 +96,7 @@
                             <td class="border-bottom-0">
                                 {{ \Carbon\Carbon::parse( $rows->datefacturerecette )->locale('fr_FR')->isoFormat('DD MMMM YYYY') }}
                             </td>
-                            
+
 
 
                       <td class="border-bottom-0">

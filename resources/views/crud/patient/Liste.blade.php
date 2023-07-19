@@ -21,6 +21,7 @@
       <div id="content">
         @include('template.Header')
         <div class="container-fluid">
+            <h2>Patient</h2>
             <form action="{{ url('/recherchepatient') }}" method="post">
               {{ csrf_field() }}
                 <input type="text" name="motcle">
@@ -78,7 +79,7 @@
                         <td class="border-bottom-0">
                             {{ \Carbon\Carbon::parse($rows->datenaissance )->locale('fr_FR')->isoFormat('DD MMMM YYYY') }}
                         </td>
-                      
+
                       <td class="border-bottom-0">
                         {{ $rows->sexe }}
                         </td>

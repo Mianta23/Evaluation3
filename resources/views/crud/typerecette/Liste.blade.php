@@ -21,6 +21,7 @@
       <div id="content">
         @include('template.Header')
         <div class="container-fluid">
+            <h2>Type de recette</h2>
             <form action="{{ url('/recherchetyperecette') }}" method="post">
               {{ csrf_field() }}
                 <input type="text" name="motcle">
