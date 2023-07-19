@@ -41,7 +41,7 @@ class DepenseController extends Controller
 
     public function listeDepense()
      {
-        $bloc = 5;
+        $bloc = 100;
         $page = request()->query('page',1); // Valeur par défaut : 1
         $perPage = request()->query('perPage',$bloc); // Valeur par défaut : 10
         $currentPage = 1;
@@ -62,7 +62,7 @@ class DepenseController extends Controller
 
      public function pagination(Request $request)
      {
-        $bloc = 50;
+        $bloc = 100;
         $page = request()->query('page',request('numero')); // Valeur par défaut : 1
         $perPage = request()->query('perPage',$bloc); // Valeur par défaut : 10
         $currentPage = request('numero');
