@@ -93,8 +93,9 @@
                             {{ $rows->nom_patient }}
                             </td>
                             <td class="border-bottom-0">
-                                {{ $rows->datefacturerecette }}
-                                </td>
+                                {{ \Carbon\Carbon::parse( $rows->datefacturerecette )->locale('fr_FR')->isoFormat('DD MMMM YYYY') }}
+                            </td>
+                            
 
 
                       <td class="border-bottom-0">

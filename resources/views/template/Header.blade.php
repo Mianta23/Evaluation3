@@ -1,6 +1,6 @@
 <nav class="navbar navbar-light" style="background-color: #063e92;">
 
-    <div class="container-fluid"><button class="btn btn-link d-md-none rounded-circle me-3" id="sidebarToggleTop" type="button"><i class="fas fa-bars"></i></button><span style="color: rgb(0,0,0);font-weight: bold;font-size: 20px;"></span>
+    <div class="container-fluid"><button class="btn btn-link d-md-none rounded-circle me-3" id="sidebarToggleTop" type="button"><i class="fas fa-bars"></i></button><span style="color: rgb(243, 230, 230);font-weight: bold;font-size: 20px;">HJRA</span>
         <ul class="navbar-nav flex-nowrap ms-auto">
             <li class="nav-item dropdown d-sm-none no-arrow"><a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown" href="#"><i class="fas fa-search"></i></a>
                 <div class="dropdown-menu dropdown-menu-end p-3 animated--grow-in" aria-labelledby="searchDropdown">

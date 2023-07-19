@@ -74,9 +74,11 @@
                       <td class="border-bottom-0">
                         {{ $rows->nom }}
                       </td>
-                      <td class="border-bottom-0">
-                      {{ $rows->datenaissance }}
-                      </td>
+
+                        <td class="border-bottom-0">
+                            {{ \Carbon\Carbon::parse($rows->datenaissance )->locale('fr_FR')->isoFormat('DD MMMM YYYY') }}
+                        </td>
+                      
                       <td class="border-bottom-0">
                         {{ $rows->sexe }}
                         </td>
