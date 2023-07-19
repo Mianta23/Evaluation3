@@ -23,7 +23,7 @@ create table patient(
     nom varchar,
     dateNaissance date,
     sexe varchar,
-    remboursement boolean
+    remboursement boolean default 'true'
 );
 -- insert into patient(nom,dateNaissance,sexe,remboursement)values('Ravao','2002-05-05','F',true),('Rasoa','2002-05-05','F',false),('Rabe','2002-05-05','M',true),('Rakoto','2002-05-05','M',false);
 
